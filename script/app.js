@@ -6,7 +6,7 @@ console.log(playbook_list.length);
 var playbooks_data = Array(playbook_list.length);
 
 for(var i = 0; i < playbook_list.length; i ++) {
-    var playbook_path = "../assets/books/" + playbook_list[i].bookName.toLowerCase() + ".json" 
+    var playbook_path = window.location["href"] + "/assets/books/" + playbook_list[i].bookName.toLowerCase() + ".json" 
     console.log(playbook_path);
     var response = await fetch(playbook_path);
     // playbooks_data[i] = await response.json();
